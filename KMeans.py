@@ -71,13 +71,20 @@ def _rest_clusters(data, centers, labels, n_cluster):
     return new_centers
 
 
-def _single_kmeans(data, n_cluster, random_seed, max_iter):
+def _single_kmeans(data, n_cluster, random_seed, max_iter, tolerance):
     n_points, _ = data.shape
     centers = _random_centroid_init(data, n_cluster, random_seed=random_seed)
 
     for iteration in range(max_iter):
         labels, inertia = _assign_points_to_cluster(data, centers)
-        centers = _rest_clusters(data, centers, labels, n_cluster)
+        new_centers = _rest_clusters(data, centers, labels, n_cluster)
+        center_shift = np.linalg.norm(centers - new_centers)
+        print("center_shift {} @ iter {}".format(center_shift, iteration))
+        if center_shift < tolerance:
+            print("tolerance get reached @ iter {}".format(iteration))
+            return labels, centers
+        centers = new_centers
+
     return labels, centers
 
 
@@ -86,12 +93,14 @@ class KMeans:
         self.n_cluster = n_cluster
         self.random_seed = _get_random_seed()
         self.max_iter = max_iter
+        self.tolerance = 1e-7
 
     def fit(self, data):
         _check_sanity(data, self.n_cluster)
         labels, centers = _single_kmeans(data, self.n_cluster,
                                          random_seed=self.random_seed,
-                                         max_iter=self.max_iter)
+                                         max_iter=self.max_iter,
+                                         tolerance=self.tolerance)
         return labels, centers
 
 
