@@ -16,6 +16,7 @@ This repo implements simple k-means clustering.
 For algorithmic implementation : `45min`    
 For visualization codes : `1 hour`
 
+
 ## Code Explanation 
 -   `test.py` generates `-n_points` number of data points for `-n_cluters` number of 2 dimensional multivariate gaussian distributions.
 The parameters for each distribution, mean and covariance, is random-sampled but cross-dimensional variances are set to be `0` for its visual tidiness. 
