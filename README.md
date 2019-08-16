@@ -17,8 +17,9 @@ For algorithmic implementation : `45min`
 For visualization codes : `1 hour`
 
 ## Code Explanation 
-First, `test.py` generates `-n_points` number of data points for `-n_cluters` number of 2 dimensional multivariate gaussian distributions.
-The parameters for each distribution, mean and covariance, is random-sampled, but covariances is set to be `0` for its visual tidiness. 
-The data points and its sampled gaussian distributions are visualized in `result/raw.png` and `result/gaussian.png` respectively.
+-   `test.py` generates `-n_points` number of data points for `-n_cluters` number of 2 dimensional multivariate gaussian distributions.
+The parameters for each distribution, mean and covariance, is random-sampled but cross-dimensional variances are set to be `0` for its visual tidiness. 
 
-After data generation, the `KMeans` runs on the data and its `labels` and `centorids` are plotted in `result/kmeans.png`
+-   The generate4d data points and its sampled gaussian distributions will be visualized in `result/raw.png` and `result/gaussian.png` respectively.
+
+-   After data generation, the `KMeans` runs on the data and its `labels` and `centorids` are plotted in `result/kmeans.png`
