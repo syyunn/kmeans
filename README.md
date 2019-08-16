@@ -23,3 +23,5 @@ The parameters for each distribution, mean and covariance, is random-sampled but
 -   The generated data points and its sampled gaussian distributions will be visualized under the name of `result/raw.png` and `result/gaussian.png` respectively.
 
 -   After data generation, the `KMeans` runs on the data and its `labels` and `centorids` will be plotted under the name of `result/kmeans.png`
+
+-   To compare the `Gaussian` and `KMeans` together, please refer to the `result/final.png` which concatenates every generated pngs.
