@@ -1,0 +1,21 @@
+13:44:00,419 root INFO  Generated 500 data points from 5 different 2 dimensional multivariate gaussian distributions. (100 data points for each cluster.)
+13:44:00,445 matplotlib.legend WARNING No handles with labels found to put in legend.
+13:44:00,929 root INFO [Iter 0] intertia        626.91
+13:44:00,929 root INFO [Iter 0] center_shift    2.44
+13:44:00,930 root INFO [Iter 1] intertia        393.02
+13:44:00,930 root INFO [Iter 1] center_shift    0.51
+13:44:00,931 root INFO [Iter 2] intertia        371.27
+13:44:00,931 root INFO [Iter 2] center_shift    0.21
+13:44:00,932 root INFO [Iter 3] intertia        367.64
+13:44:00,932 root INFO [Iter 3] center_shift    0.13
+13:44:00,933 root INFO [Iter 4] intertia        366.55
+13:44:00,933 root INFO [Iter 4] center_shift    0.08
+13:44:00,934 root INFO [Iter 5] intertia        366.46
+13:44:00,934 root INFO [Iter 5] center_shift    0.02
+13:44:00,935 root INFO [Iter 6] intertia        366.41
+13:44:00,935 root INFO [Iter 6] center_shift    0.03
+13:44:00,936 root INFO [Iter 7] intertia        366.34
+13:44:00,936 root INFO [Iter 7] center_shift    0.03
+13:44:00,937 root INFO [Iter 8] intertia        366.47
+13:44:00,937 root INFO [Iter 8] center_shift    0.00
+13:44:00,937 root INFO [Iter 8] tolerance get reached

@@ -22,7 +22,6 @@ class Tester:
         self.data = None
         self.labels = None
         self.n_points = None
-        self.data_without_label_idx = None
 
     def generate_2d_gaussian_points(self, how_many_per_each_gaussian=10):
         self.how_many_per_each_gaussian = how_many_per_each_gaussian

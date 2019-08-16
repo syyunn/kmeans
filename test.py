@@ -8,6 +8,11 @@ import utils
 
 
 def main():
+    logging.basicConfig(filename="result/log.txt",
+                        filemode='w',
+                        format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
+                        datefmt='%H:%M:%S',
+                        level=logging.DEBUG)
     logging.getLogger().setLevel(logging.INFO)
 
     parser = argparse.ArgumentParser()

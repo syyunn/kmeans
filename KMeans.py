@@ -1,3 +1,5 @@
+import logging
+
 import numpy as np
 
 from Tester import Tester
@@ -77,11 +79,12 @@ def _single_kmeans(data, n_cluster, random_seed, max_iter, tolerance):
 
     for iteration in range(max_iter):
         labels, inertia = _assign_points_to_cluster(data, centers)
+        logging.info("[Iter {}] intertia        {:.2f}".format(iteration, inertia))
         new_centers = _rest_clusters(data, centers, labels, n_cluster)
         center_shift = np.linalg.norm(centers - new_centers)
-        print("center_shift {} @ iter {}".format(center_shift, iteration))
+        logging.info("[Iter {}] center_shift    {:.2f}".format(iteration, center_shift))
         if center_shift < tolerance:
-            print("tolerance get reached @ iter {}".format(iteration))
+            logging.info("[Iter {}] tolerance get reached".format(iteration))
             return labels, centers
         centers = new_centers
 
