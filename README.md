@@ -28,5 +28,5 @@ The parameters for each distribution, mean and covariance, is random-sampled but
 
 -   To check the convergence, please refer to `result/log.txt` which logs the `intertia` and `center shift`.
 
-### TODO 
+#### TODO 
 - Taking pictures of shifting centers while KMeans iterates over the process.
