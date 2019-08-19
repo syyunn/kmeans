@@ -29,3 +29,6 @@ The parameters for each distribution, mean and covariance, is random-sampled but
 -   To compare the `Gaussian` and `KMeans` together, please refer to the `result/final.png` which concatenates every generated pngs.
 
 -   To check the convergence, please refer to `result/log.txt` which logs the `intertia` and `center shift`.
+
+## TODO 
+- Taking pictures of shifting centers while KMeans iterates over the process.
